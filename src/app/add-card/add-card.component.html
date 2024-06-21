@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<section>
+<div>
+        <span class="material-symbols-outlined backToStartScreen" routerLink="" routerLinkActive="active" >
+                arrow_back_ios
+            </span>       
+            
+        <h1>Neue Karte</h1>
+        <p>Frage:</p>
+        <textarea class="question" required [(ngModel)]="question" type="text" placeholder="Frage eingeben..."></textarea>
+        <p>Antwort:</p>
+        <textarea class="answer" required [(ngModel)]="answer "type="text" placeholder="Antwort eingeben..."></textarea>
+
+        <button (click)="addCard()"  type="submit">Hinzufügen</button>
+
+        <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
+
+
+</div>
+</section>

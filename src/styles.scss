@@ -1,0 +1,22 @@
+body{
+    background-color: rgb(255, 255, 255);
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@font-face {
+    font-family: 'Nunito-Black';
+    src: url(./assets/fonts/Nunito-Black.ttf);}
+
+@font-face {
+    font-family: 'Nunito-Light';
+    src: url(./assets/fonts/Nunito-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Nunito-Regular';
+    src: url(./assets/fonts/Nunito-Regular.ttf);
+}

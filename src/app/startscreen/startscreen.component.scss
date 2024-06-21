@@ -1,0 +1,78 @@
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 32px;
+    height: 100dvh;
+    background-image: url(./../assets/img/girl.png);
+    background-position: bottom ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100dvw;
+}
+
+h2{
+    font-size: 38px;
+    font-family: 'Nunito-Black';
+    font-weight: 300;
+    color: #5195CE;
+    letter-spacing: 1px;
+    position: absolute;
+    top:10vh;
+    padding: 8px;
+}
+
+p{
+    padding: 24px;
+}
+
+.bottom-text{
+    margin-top: 10dvh;
+    visibility: hidden;
+}
+
+strong{
+    font-size: 18px
+}
+
+.home-btn{
+    height: 60px;
+    width: 220px;
+    border-radius: 100px;
+    background-color: #5195CE;
+    color: white;
+    border: none;
+    font-family: 'Nunito-Regular';
+    font-size: 18px;
+    &:hover{
+        background-color: #6bade4;
+        cursor: pointer;
+        border: 1px solid white;
+    }
+}
+
+.add-new-btn{
+    height: 60px;
+    width: 220px;
+    border-radius: 100px;
+    background-color: #5195CE;
+    color: white;
+    border: none;
+    font-family: 'Nunito-Regular';
+    font-size: 18px;
+    &:hover{
+        background-color: #6bade4;
+        cursor: pointer;
+        border: 1px solid white;
+    }
+}
+
+@media (min-width:600px) {
+    section{
+        background-image: none;
+    }
+    .bottom-text{
+        visibility: visible;
+    }
+}

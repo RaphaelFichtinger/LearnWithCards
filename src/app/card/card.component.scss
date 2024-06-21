@@ -1,0 +1,184 @@
+@keyframes flip {
+    from {
+      transform: rotateY(0);
+    }
+    to {
+      transform: rotateY(180deg);
+    }
+  }
+  .card.flip {
+    animation: flip 0.5s forwards;
+  }
+  
+  .hide {
+    visibility: hidden;
+    display: none;
+  }
+  
+  .show {
+    visibility: visible;
+    display: block;
+  }
+
+section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    h3{
+        color: #5195CE;
+        font-family: 'Nunito-Regular';
+        font-size: 16px;
+        padding: 16px;
+        margin-bottom: 32px;
+    }
+}
+
+.topdiv {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    padding-left: 32px;
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    gap: 5%;
+
+}
+
+.edit-btn{
+    width: 120px;
+    font-family: 'Nunito-Regular';
+    background-color: #5195CE;
+    border: none;
+    border-radius: 100px;
+    color: white;
+    font-size: 14px;
+    padding: 6px;
+    &:hover{
+        cursor: pointer;
+        background-color: #6bade4;
+    }
+}
+
+.delete-btn{
+    width: 120px;
+    font-family: 'Nunito-Regular';
+    background-color: #5195CE;
+    border: none;
+    border-radius: 100px;
+    color: white;
+    font-size: 14px;
+    padding: 6px;
+    &:hover{
+        cursor: pointer;
+        background-color: #6bade4;
+    }
+}
+
+.backToStartScreen{
+    width: 40px !important;
+    height: 40px !important;
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    color: #5195CE;
+    font-size: 42px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+.btn-switch {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #bfbfbf;
+    color: #ffffff;
+    border-radius: 100%;
+    &:hover{
+        cursor: pointer;
+        background-color: rgb(165, 165, 165);
+
+    }
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Nunito-Regular';
+    background-color: rgb(255, 199, 249);
+    border-radius: 20px;
+    height: 50dvh;
+    width: 80dvw;
+    max-width: 500px;
+    color: black;
+    overflow: hidden; 
+
+
+    &:hover{
+        cursor: pointer;
+    }
+    p{
+        font-size: 18px;
+        padding: 8px;
+        border-radius: 20px;
+        margin-left: 4dvw;
+        margin-right: 4dvw;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden; 
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        white-space: normal; 
+    }
+    }
+
+.delete-message{
+    width: 200px;
+    padding: 8px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 3dvh;
+}
+
+
+.btns{
+    display: flex;
+    align-items: center;
+    gap: 84px;
+    flex-direction: row;
+    margin-top: 32px;
+}
+
+.questionContainer{
+}
+
+.answerContainer{
+    word-wrap: break-word; 
+}
+
+.hide{
+    visibility: hidden;
+    display: none;
+}
+
+@media (max-width: 540px){
+    section{
+        margin-top: 2vh;
+    }
+
+
+}

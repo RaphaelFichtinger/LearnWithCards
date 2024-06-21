@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<section *ngIf="CardService.cards.length > 0"> 
+
+    <span class="material-symbols-outlined backToStartScreen" routerLink="" routerLinkActive="active" >
+        chevron_left 
+    </span>
+
+
+    <div class="topdiv">
+
+        <button [routerLink]="['/home/update', CardService.cards[currentIndex].id]" class="edit-btn">
+            Diese Karte bearbeiten
+        </button> 
+
+        <button (click)="deleteCard()" class="delete-btn">
+            Diese Karte löschen
+        </button>
+    </div> 
+     
+       <h3>Klicke auf die Karte, um die Antwort anzuzeigen</h3>
+  <div [ngStyle]="{'background-color': backgroundColor}" 
+       class="card" 
+       (click)="toggle()" 
+       [class.flip]="isFlipping">
+    <div [ngClass]="{ 'hide': !isQuestionVisible, 'show': isQuestionVisible }" class="questionContainer">
+      <p>{{ CardService.cards[currentIndex].question }}</p>
+    </div>
+
+    <div [ngClass]="{ 'hide': isQuestionVisible, 'show': !isQuestionVisible }" class="answerContainer">
+      <p>{{ CardService.cards[currentIndex].answer }}</p>
+    </div>
+  </div>
+
+  <div class="btns">
+    <span class="material-symbols-outlined btn-switch" (click)="prevCard()">chevron_left</span>
+    <span class="material-symbols-outlined btn-switch" (click)="nextCard()">chevron_right</span>
+  </div>
+
+  <div *ngIf="deleteMessage" class="delete-message">{{ deleteMessage }}</div>
+</section>
